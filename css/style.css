@@ -12,14 +12,12 @@ body {
 .banner {
   max-width: 100%;
   width: 100%;
-  min-height: 80vh;
   position: relative;
 }
-.banner .container {
+.banner__container {
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +29,6 @@ body {
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
 }
 .banner__image-img {
   width: 100%;

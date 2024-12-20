@@ -1,14 +1,14 @@
 .banner {
   max-width: 100%;
   width: 100%;
-  min-height: $banner-height;
+  // min-height: $banner-height;
   position: relative;
 
-  .container {
+  &__container {
     max-width: 1240px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    // padding: 0 15px;
 
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    // left: 0;
 
     &-img {
       width: 100%;
@@ -36,9 +36,6 @@
     width: 100%;
     padding-block: 157px;
     position: relative;
-    // top: 50%;
-    // left: 14%;
-    // transform: translateY(-50%);
     color: $color-black;
     text-align: left;
     z-index: 2;
