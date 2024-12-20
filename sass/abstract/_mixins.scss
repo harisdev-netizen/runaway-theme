@@ -17,24 +17,3 @@
     }
   }
 }
-
-@mixin font-style($size, $weight: normal, $shadow: null) {
-  font-size: $size;
-  font-weight: $weight;
-  @if $shadow {
-    text-shadow: $shadow;
-  }
-}
-
-@mixin button-style($bg-color, $text-color, $padding, $radius, $hover-bg) {
-  background: $bg-color;
-  color: $text-color;
-  padding: $padding;
-  border-radius: $radius;
-  transition: background 0.3s ease;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-
-  &:hover {
-    background: $hover-bg;
-  }
-}

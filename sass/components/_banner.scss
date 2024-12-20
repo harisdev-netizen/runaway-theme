@@ -1,7 +1,21 @@
 .banner {
+  max-width: 100%;
   width: 100%;
+  min-height: $banner-height;
   position: relative;
-  height: $banner-height;
+
+  .container {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+  }
 
   &__image {
     width: 100%;
@@ -18,74 +32,68 @@
   }
 
   &__content {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    color: var(--white);
+    max-width: 573px;
+    width: 100%;
+    padding-block: 157px;
+    position: relative;
+    // top: 50%;
+    // left: 14%;
+    // transform: translateY(-50%);
+    color: $color-black;
     text-align: left;
     z-index: 2;
 
-    &-title {
-      @include font-style(
-        calc(var(--font-size-large) * 1.5),
-        bold,
-        2px 2px 5px rgba(0, 0, 0, 0.7)
-      );
+    .container & {
+      left: 0;
+      text-align: left;
+    }
+  }
 
-      @include respond-to('medium') {
-        @include font-style(calc(var(--font-size-large) * 1.2), bold);
-      }
+  &__title {
+    font-size: $font-size-xlarge;
+    font-weight: 600;
+    margin-bottom: 26px;
 
-      @include respond-to('small') {
-        @include font-style(var(--font-size-medium), bold);
-      }
+    @include respond-to('medium') {
+      font-size: $font-size-large;
+      font-weight: 600;
     }
 
-    &-subtitle {
-      @include font-style(
-        var(--font-size-medium),
-        normal,
-        2px 2px 5px rgba(0, 0, 0, 0.7)
-      );
+    @include respond-to('small') {
+      font-size: $font-size-medium;
+      font-weight: 600;
+    }
+  }
 
-      @include respond-to('medium') {
-        @include font-style(var(--font-size-small), normal);
-      }
+  &__subtitle {
+    font-size: $font-size-medium;
+    font-weight: normal;
 
-      @include respond-to('small') {
-        @include font-style(var(--font-size-xsmall), normal);
-      }
+    @include respond-to('medium') {
+      font-size: $font-size-small;
+      font-weight: normal;
     }
 
-    &-button {
-      @include button-style(
-        var(--black),
-        var(--white),
-        15px 30px,
-        50px,
-        var(--gray-dark)
-      );
+    @include respond-to('small') {
+      font-size: var(--font-size-xsmall);
+      font-weight: normal;
+    }
+  }
 
-      @include respond-to('medium') {
-        @include button-style(
-          var(--black),
-          var(--white),
-          12px 25px,
-          40px,
-          var(--gray-dark)
-        );
-      }
+  &__button {
 
-      @include respond-to('small') {
-        @include button-style(
-          var(--black),
-          var(--white),
-          10px 20px,
-          30px,
-          var(--gray-dark)
-        );
-      }
+    @include respond-to('medium') {
+      
+    }
+
+    @include respond-to('small') {
+    }
+  }
+
+  @include respond-to('small') {
+    .container &__content {
+      text-align: center;
+      left: 0;
     }
   }
 }
