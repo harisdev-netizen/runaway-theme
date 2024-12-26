@@ -1,0 +1,18 @@
+.banner__button {
+  display: inline-block;
+  padding: 10px 20px;
+  // margin-top: 20px;
+  font-size: $font-size-medium-large;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  // border: 2px solid $color-black;
+  border-radius: 100px;
+  color: $color-white;
+  background-color: $color-black;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  // position: relative;
+  // z-index: 2;
+}
