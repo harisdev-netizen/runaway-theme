@@ -1,0 +1,219 @@
+.oversized-tees {
+  display: flex;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  // padding: 2rem;
+
+  &__container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__left {
+    flex: 1;
+    position: relative;
+    // height: 562px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  &__shop-btn {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    padding: 0.75rem 1.5rem;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+
+  &__right {
+    flex: 2;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 0.8;
+    margin-bottom: 20px;
+  }
+
+  &__carousel {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+
+    & .oversized-tees__nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $color-white;
+      border: none;
+      cursor: pointer;
+      z-index: 5;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $color-gray;
+      }
+
+      &--left {
+        left: -1rem;
+      }
+
+      &--right {
+        right: -1rem;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: $color-black;
+      }
+    }
+  }
+
+  &__card {
+    position: relative;
+    border-radius: 10px;
+    text-align: left;
+    flex: 0 0 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-image {
+    position: relative;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: black;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 3px;
+  }
+
+  &__wishlist-btn {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: black;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__product-name {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &__price {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: black;
+  }
+
+  &__colors {
+    display: flex;
+    justify-content: start;
+    gap: 0.5rem;
+    margin-bottom: 32px;
+  }
+
+  &__color {
+    width: 12px;
+    height: 12px;
+    border-radius: 0;
+    border: 1px solid $color-gray;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:active {
+      border-color: $color-black;
+    }
+
+    &.selected {
+      border-color: $color-black;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $color-black;
+    cursor: pointer;
+    padding: 1px;
+
+    &--active {
+      background: $color-white;
+      border: 0.5px solid $color-black;
+      padding: 3px;
+    }
+  }
+
+  &__cart-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
