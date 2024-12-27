@@ -3,17 +3,29 @@
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
-  // padding: 2rem;
+  margin-bottom: 100px;
 
   &__container {
     display: flex;
     gap: 2rem;
+
+    @include respond-to('medium') {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
   }
 
   &__left {
     flex: 1;
     position: relative;
-    // height: 562px;
+
+    @include respond-to('medium') {
+      height: auto;
+    }
+
+    // @include respond-to('small') {
+    //   flex: 0 0 100%;
+    // }
   }
 
   &__image {
@@ -21,28 +33,50 @@
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
+
+    @include respond-to('medium') {
+      height: auto;
+    }
   }
 
   &__shop-btn {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem; /* Adjusted to remove extra space between image and button */
     left: 2rem;
-    padding: 0.75rem 1.5rem;
-    background-color: black;
-    color: white;
-    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: $color-white;
+    color: $color-black;
+    font-size: $font-size-medium-large;
+    text-transform: uppercase;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.4s;
 
     &:hover {
-      background-color: #333;
+      background-color: $color-black;
+      color: $color-white;
+    }
+
+    @include respond-to('medium') {
+      left: 2rem;
+      bottom: 1rem;
+      font-size: $font-size-medium;
+      padding: 8px 16px;
+    }
+
+    @include respond-to('small') {
+      left: 1rem;
+      bottom: 0.5rem;
     }
   }
 
   &__right {
     flex: 2;
+
+    @include respond-to('medium') {
+      text-align: center;
+    }
   }
 
   &__title {
@@ -51,12 +85,26 @@
     text-transform: uppercase;
     line-height: 0.8;
     margin-bottom: 20px;
+
+    @include respond-to('medium') {
+      font-size: 28px;
+    }
+
+    @include respond-to('small') {
+      font-size: 24px;
+    }
   }
 
   &__carousel {
     display: flex;
-    gap: 1rem;
+    gap: 20px;
     position: relative;
+
+    @include respond-to('medium') {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
 
     & .oversized-tees__nav {
       position: absolute;
@@ -87,6 +135,10 @@
         right: -1rem;
       }
 
+      @include respond-to('small') {
+        display: none;
+      }
+
       svg {
         width: 16px;
         height: 16px;
@@ -103,6 +155,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include respond-to('medium') {
+      flex: 0 0 200px;
+    }
+
+    @include respond-to('small') {
+      flex: 0 0 150px;
+    }
   }
 
   &-image {
@@ -115,23 +175,12 @@
     }
   }
 
-  &__badge {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: black;
-    color: white;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-    border-radius: 3px;
-  }
-
   &__wishlist-btn {
     position: absolute;
     top: 8px;
     left: 8px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background: white;
     border-radius: 50%;
     display: flex;
@@ -140,36 +189,34 @@
     font-size: 1.25rem;
     color: black;
     cursor: pointer;
-    border: 1px solid #ccc;
+    border: none;
+
+    img {
+      width: 19.5px;
+      height: 18.5px;
+    }
+
+    @include respond-to('medium') {
+      top: 4px;
+      left: 4px;
+    }
   }
 
   &__details {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-  }
 
-  &__text {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__product-name {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-
-  &__price {
-    font-size: 1rem;
-    margin: 0.5rem 0;
-    color: black;
+    // @include respond-to('small') {
+    //   // flex-direction: column;
+    //   // align-items: center;
+    // }
   }
 
   &__colors {
     display: flex;
     justify-content: start;
     gap: 0.5rem;
-    margin-bottom: 32px;
+    // margin-bottom: 32px;
   }
 
   &__color {
@@ -195,6 +242,14 @@
     justify-content: center;
     gap: 0.5rem;
     margin-top: 2rem;
+
+    @include respond-to('medium') {
+      margin-top: 1.5rem;
+    }
+
+    @include respond-to('small') {
+      margin-top: 1rem;
+    }
   }
 
   &__dot {
@@ -215,5 +270,13 @@
   &__cart-btn {
     font-size: 1.5rem;
     cursor: pointer;
+    background: $color-gray;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
   }
 }

@@ -1,0 +1,78 @@
+.sale-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+
+  &__container {
+    display: flex;
+    gap: 20px;
+    max-width: 1240px;
+    width: 100%;
+    justify-content: space-between;
+
+    @include respond-to('small') {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__block {
+    position: relative;
+    flex: 1;
+    max-width: 50%;
+    overflow: hidden;
+
+    &:hover .sale-section__content {
+      opacity: 1;
+    }
+
+    @include respond-to('small') {
+      max-width: 100%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    inset: 0;
+    max-width: 285px;
+    width: 100%;
+    margin: 0 auto 0 266px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    z-index: 2;
+  }
+
+  &__title {
+    font-size: $font-size-large;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: $color-black;
+  }
+
+  &__button {
+    background-color: $color-black;
+    color: $color-white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #444;
+    }
+  }
+}

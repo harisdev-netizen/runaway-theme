@@ -191,6 +191,161 @@ body {
   }
 }
 
+.features {
+  max-width: 100%;
+  width: 100%;
+  min-height: 248px;
+  padding: 64px 100px;
+  background-color: #000;
+}
+@media only screen and (max-width: 768px) {
+  .features {
+    padding: 32px 20px;
+    max-height: none;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .features {
+    padding: 48px 60px;
+  }
+}
+.features__container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .features__container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.features__item {
+  padding-inline: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .features__item {
+    padding-inline: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .features__item {
+    width: 100%;
+    padding-inline: 0;
+    padding-block: 32px;
+  }
+}
+.features__icon {
+  margin-bottom: 16px;
+  width: 48px;
+  height: 48px;
+}
+@media only screen and (max-width: 768px) {
+  .features__icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 20px;
+  }
+}
+.features__title {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-inline: 38px;
+  line-height: 1.5em;
+}
+@media only screen and (max-width: 1024px) {
+  .features__title {
+    font-size: 16px;
+    padding-inline: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .features__title {
+    font-size: 14px;
+    padding-inline: 105px;
+  }
+}
+
+.flash-sale {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  height: 232px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.flash-sale__container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media only screen and (max-width: 576px) {
+  .flash-sale__container {
+    flex-direction: row;
+    text-align: center;
+  }
+}
+.flash-sale__content {
+  flex: 1;
+}
+.flash-sale__title {
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.flash-sale__description {
+  font-size: 14px;
+  line-height: 1;
+}
+.flash-sale__timer {
+  display: flex;
+  gap: 8px;
+}
+@media only screen and (max-width: 576px) {
+  .flash-sale__timer {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+.flash-sale__time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  width: 70px;
+  height: 100px;
+  border: 1px solid #000;
+  text-align: center;
+  padding: 0 40.5px 0 40.5px;
+}
+.flash-sale__time {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.flash-sale__label {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 .new-arrivals {
   max-width: 1440px;
   width: 100%;
@@ -438,16 +593,6 @@ body {
   width: 100%;
   border-radius: 8px;
 }
-.new-arrivals__badge {
-  position: absolute;
-  top: 8px;
-  right: 0;
-  background: #000;
-  color: #fff;
-  padding: 4px 12px;
-  font-size: 12px;
-  line-height: 0.6;
-}
 .new-arrivals__details {
   position: relative;
   margin-top: 1rem;
@@ -547,14 +692,26 @@ body {
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
 .oversized-tees__container {
   display: flex;
   gap: 2rem;
 }
+@media only screen and (max-width: 768px) {
+  .oversized-tees__container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
 .oversized-tees__left {
   flex: 1;
   position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .oversized-tees__left {
+    height: auto;
+  }
 }
 .oversized-tees__image {
   width: 100%;
@@ -562,24 +719,50 @@ body {
   border-radius: 10px;
   object-fit: cover;
 }
+@media only screen and (max-width: 768px) {
+  .oversized-tees__image {
+    height: auto;
+  }
+}
 .oversized-tees__shop-btn {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem; /* Adjusted to remove extra space between image and button */
   left: 2rem;
-  padding: 0.75rem 1.5rem;
-  background-color: black;
-  color: white;
-  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  font-size: 18px;
+  text-transform: uppercase;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.4s;
 }
 .oversized-tees__shop-btn:hover {
-  background-color: #333;
+  background-color: #000;
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .oversized-tees__shop-btn {
+    left: 2rem;
+    bottom: 1rem;
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .oversized-tees__shop-btn {
+    left: 1rem;
+    bottom: 0.5rem;
+  }
 }
 .oversized-tees__right {
   flex: 2;
+}
+@media only screen and (max-width: 768px) {
+  .oversized-tees__right {
+    text-align: center;
+  }
 }
 .oversized-tees__title {
   font-size: 32px;
@@ -588,10 +771,27 @@ body {
   line-height: 0.8;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .oversized-tees__title {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .oversized-tees__title {
+    font-size: 24px;
+  }
+}
 .oversized-tees__carousel {
   display: flex;
-  gap: 1rem;
+  gap: 20px;
   position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .oversized-tees__carousel {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
 }
 .oversized-tees__carousel .oversized-tees__nav {
   position: absolute;
@@ -619,6 +819,11 @@ body {
 .oversized-tees__carousel .oversized-tees__nav--right {
   right: -1rem;
 }
+@media only screen and (max-width: 576px) {
+  .oversized-tees__carousel .oversized-tees__nav {
+    display: none;
+  }
+}
 .oversized-tees__carousel .oversized-tees__nav svg {
   width: 16px;
   height: 16px;
@@ -633,6 +838,16 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+@media only screen and (max-width: 768px) {
+  .oversized-tees__card {
+    flex: 0 0 200px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .oversized-tees__card {
+    flex: 0 0 150px;
+  }
+}
 .oversized-tees-image {
   position: relative;
 }
@@ -641,22 +856,12 @@ body {
   border-radius: 8px;
   object-fit: cover;
 }
-.oversized-tees__badge {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: black;
-  color: white;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
-  border-radius: 3px;
-}
 .oversized-tees__wishlist-btn {
   position: absolute;
   top: 8px;
   left: 8px;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background: white;
   border-radius: 50%;
   display: flex;
@@ -665,31 +870,26 @@ body {
   font-size: 1.25rem;
   color: black;
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: none;
+}
+.oversized-tees__wishlist-btn img {
+  width: 19.5px;
+  height: 18.5px;
+}
+@media only screen and (max-width: 768px) {
+  .oversized-tees__wishlist-btn {
+    top: 4px;
+    left: 4px;
+  }
 }
 .oversized-tees__details {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-}
-.oversized-tees__text {
-  display: flex;
-  flex-direction: column;
-}
-.oversized-tees__product-name {
-  font-size: 1rem;
-  font-weight: 600;
-}
-.oversized-tees__price {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  color: black;
 }
 .oversized-tees__colors {
   display: flex;
   justify-content: start;
   gap: 0.5rem;
-  margin-bottom: 32px;
 }
 .oversized-tees__color {
   width: 12px;
@@ -712,6 +912,16 @@ body {
   gap: 0.5rem;
   margin-top: 2rem;
 }
+@media only screen and (max-width: 768px) {
+  .oversized-tees__pagination {
+    margin-top: 1.5rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .oversized-tees__pagination {
+    margin-top: 1rem;
+  }
+}
 .oversized-tees__dot {
   width: 10px;
   height: 10px;
@@ -728,6 +938,99 @@ body {
 .oversized-tees__cart-btn {
   font-size: 1.5rem;
   cursor: pointer;
+  background: #f5f5f5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.sale__badge {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  padding: 4px 12px;
+  font-size: 12px;
+  line-height: 0.6;
+  text-transform: uppercase;
+  background: #000;
+  color: #fff;
+}
+
+.sale-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.sale-section__container {
+  display: flex;
+  gap: 20px;
+  max-width: 1240px;
+  width: 100%;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 576px) {
+  .sale-section__container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.sale-section__block {
+  position: relative;
+  flex: 1;
+  max-width: 50%;
+  overflow: hidden;
+}
+.sale-section__block:hover .sale-section__content {
+  opacity: 1;
+}
+@media only screen and (max-width: 576px) {
+  .sale-section__block {
+    max-width: 100%;
+  }
+}
+.sale-section__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.sale-section__content {
+  position: absolute;
+  inset: 0;
+  max-width: 285px;
+  width: 100%;
+  margin: 0 auto 0 266px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  z-index: 2;
+}
+.sale-section__title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #000;
+}
+.sale-section__button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+.sale-section__button:hover {
+  background-color: #444;
 }
 
 .header__top {
