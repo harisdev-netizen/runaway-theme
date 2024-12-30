@@ -3,6 +3,7 @@
   width: 100%;
   min-height: 248px;
   padding: 64px 100px;
+  margin-bottom: 100px;
   background-color: $color-black;
 
   @include respond-to('medium') {

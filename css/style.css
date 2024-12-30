@@ -196,6 +196,7 @@ body {
   width: 100%;
   min-height: 248px;
   padding: 64px 100px;
+  margin-bottom: 100px;
   background-color: #000;
 }
 @media only screen and (max-width: 768px) {
@@ -687,6 +688,208 @@ body {
   box-shadow: 0 0 0 2px #fff;
 }
 
+.product__section {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.product__heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.product__container {
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  gap: 32px;
+}
+.product__images {
+  position: relative;
+  display: flex;
+}
+.product__main-image img {
+  border: 1px solid #ccc;
+}
+.product__thumbnails {
+  display: flex;
+  flex-direction: column;
+  height: 99%;
+  justify-content: space-between;
+  position: absolute;
+  left: -120px;
+}
+.product__thumbnails img {
+  flex: 1;
+  width: auto;
+  height: auto;
+  max-height: 20%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.product__thumbnails img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.product__details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.product__title {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.product__price {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #000;
+}
+.product__rating {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.product__rating .product__stars {
+  color: gold;
+}
+.product__rating .product__reviews {
+  color: #000;
+}
+.product__description {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 24px;
+}
+.product__options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.product__color {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.product__color-name {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.product__color-options {
+  display: flex;
+  gap: 10px;
+}
+.product__color-box {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.product__color-box--red {
+  background: #9E2A37;
+}
+.product__color-box--brown {
+  background: #3E2830;
+}
+.product__color-box--black {
+  background: #2A292D;
+}
+.product__size {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.product__size-options {
+  display: flex;
+  gap: 10px;
+}
+.product__size-btn {
+  padding: 14px 23px;
+  background-color: #fff;
+  cursor: pointer;
+  margin-bottom: 24px;
+  border: 1px solid #f5f5f5;
+}
+.product__size-btn--active {
+  border: 1px solid #000;
+  background: transparent;
+  color: #000;
+}
+.product__size-chart {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.product__quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.product__quantity-controls {
+  display: flex;
+  gap: 5px;
+}
+.product__quantity-controls-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-align: center;
+}
+.product__quantity-controls-input {
+  width: 50px;
+  text-align: center;
+}
+.product__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.product__add-to-cart, .product__buy-with {
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  border: none;
+  border-radius: 100px;
+  align-items: center;
+  cursor: pointer;
+}
+.product__add-to-cart:first-of-type, .product__buy-with:first-of-type {
+  background: #000;
+  color: #fff;
+}
+.product__add-to-cart:last-of-type, .product__buy-with:last-of-type {
+  display: flex;
+  justify-content: center;
+  background-color: #5A31F4;
+  color: #fff;
+  margin-bottom: 24px;
+  gap: 10px;
+}
+.product__add-to-cart:last-of-type img, .product__buy-with:last-of-type img {
+  height: 17px;
+}
+.product__other-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.product__other-options img {
+  width: 40px;
+}
+
 .oversized-tees {
   display: flex;
   max-width: 1240px;
@@ -1022,15 +1225,18 @@ body {
 .sale-section__button {
   background-color: #000;
   color: #fff;
-  border: none;
+  border: 1px solid #000;
+  border-radius: 50px;
   padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
   text-transform: uppercase;
-  transition: background-color 0.3s ease;
+  transition: all 0.4s ease-in-out;
 }
 .sale-section__button:hover {
-  background-color: #444;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
 }
 
 .header__top {

@@ -6,6 +6,12 @@ $color-black: #000;
 $color-white: #fff;
 $color-gray: #f5f5f5;
 $color-gray-new: #808080;
+$color-purple: #5A31F4;
+
+// PRODUCT COLORS
+$color-product-primary: #9E2A37;
+$color-product-secondary: #3E2830;
+$color-product-tertiary: #2A292D;
 
 
 // FONTS
@@ -16,8 +22,15 @@ $font-size-xxsmall: 12px;
 $font-size-small: 14px;
 $font-size-medium: 16px;
 $font-size-medium-large: 18px;
+$font-size-medium-xlarge: 24px;
 $font-size-large: 32px;
 $font-size-xlarge: 48px;
 
 // HEIGHT
 $banner-height: 80vh;
+
+// MAX-CONTAINER
+$max-container-width: 1240px;
+
+// MARGINS
+$container-bottom-margin: 100px;
