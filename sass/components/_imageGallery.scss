@@ -1,0 +1,45 @@
+.image-gallery {
+  max-width: 1240px;
+  margin: 0 auto;
+  // padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    &--top {
+      margin-bottom: 40px;
+    }
+
+    &--bottom {
+      margin-top: 40px;
+    }
+  }
+
+  &__img {
+    height: auto;
+    object-fit: none;
+
+    // &--large {
+    //   width: 300px;
+    // }
+  }
+
+  &__center {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    width: 90px;
+    height: auto;
+  }
+}

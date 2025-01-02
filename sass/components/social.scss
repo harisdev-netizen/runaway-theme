@@ -1,0 +1,136 @@
+.instagram {
+  font-family: 'Plus Jakarta Sans';
+  padding-block: 100px;
+  margin-bottom: $container-bottom-margin;
+  background-color: $color-black;
+  color: $color-white;
+  // text-align: center;
+  // padding: 3rem;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    font-size: $font-size-large;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  &__posts {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+  }
+
+  &__post {
+    max-width: 342px;
+    width: 100%;
+    padding: 24px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    color: $color-black;
+    overflow: hidden;
+    opacity: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &--rich {
+      transform: scale(1.1);
+    }
+
+    &--faded {
+      opacity: 0.4;
+    }
+
+    &:hover {
+      opacity: 1;
+      // transform: scale(1.1);
+    }
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 0.5rem;
+  }
+
+  &__account {
+    font-size: $font-size-xxsmall;
+    font-weight: bold;
+  }
+
+  &__time {
+    font-size: $font-size-xxxsmall;
+    font-weight: 500;
+    color: $color-gray-new-light;
+    margin-left: 18px;
+    white-space: nowrap;
+  }
+
+  &__handle {
+    font-size: $font-size-xxsmall;
+  }
+
+  &__text {
+    display: flex;
+
+    // &__top {
+    //   // display: flex;
+    //   // justify-content: space-between;
+    //   // align-items: center;
+    // }
+
+    &__row {
+      // align-items: flex-start;
+      text-align: left;
+      gap: 1rem;
+    }
+  }
+
+  &__main-image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__description {
+    font-size: $font-size-medium;
+    margin: 1rem 0;
+
+    &__hashtags {
+      color: #555;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    gap: 8px;
+    font-size: $font-size-small;
+
+    img {
+      width: 16px;
+      gap: 10px;
+    }
+  }
+
+  &__follow {
+    display: block;
+    margin: auto;
+    background-color: $color-white;
+    color: $color-black;
+    border: 1px solid $color-white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: $font-size-medium-large;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      background-color: transparent;
+      color: $color-white;
+    }
+  }
+}

@@ -263,24 +263,31 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 16px;
+    border: none;
 
     &-controls {
+      border: none;
+      font-size: $font-size-medium;
+      font-weight: 500;
       display: flex;
-      gap: 5px;
+      padding: 8px 12px;
+      border: 1px solid $color-gray-new;
     }
 
-    &-btn {
-        width: 30px;
-        height: 30px;
-        border: 1px solid #ccc;
-        cursor: pointer;
-        text-align: center;
-      }
+    &-btn { 
+      width: 30px;
+      height: 30px;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      background-color: transparent;
+    }
 
-      &-input {
-        width: 50px;
-        text-align: center;
-      }
+    &-input {
+      width: 50px;
+      text-align: center;
+      border: none;
+    }
 
     @include respond-to('small') {
       gap: 8px;

@@ -1,0 +1,106 @@
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-block: 100px;
+  text-align: center;
+  background-color: $color-light-black;
+  color: $color-white;
+
+  &__title {
+    font-size: $font-size-large;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+
+    @include respond-to('medium') {
+      font-size: $font-size-medium;
+    }
+
+    @include respond-to('small') {
+      font-size: $font-size-small;
+    }
+  }
+
+  &__subtitle {
+    font-size: $font-size-medium;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include respond-to('medium') {
+      font-size: $font-size-small;
+    }
+
+    @include respond-to('small') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    @include respond-to('small') {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    left: -29px;
+
+    svg path {
+      fill: $color-white;
+    }
+
+    &:hover {
+      color: #bbbbbb;
+    }
+
+    @include respond-to('medium') {
+      font-size: 18px;
+      left: -20px;
+    }
+
+    @include respond-to('small') {
+      font-size: 16px;
+      left: 0;
+    }
+  }
+
+  &__input {
+    flex: 1;
+    max-width: 536px;
+    padding: 16px 24px 16px 0;
+    border: none;
+    border-bottom: 2px solid $color-white;
+    background-color: transparent;
+    color: $color-white;
+    font-size: 16px;
+    text-transform: uppercase;
+    outline: none;
+
+    &::placeholder {
+      color: #bbbbbb;
+    }
+
+    @include respond-to('medium') {
+      max-width: 400px;
+    }
+
+    @include respond-to('small') {
+      max-width: 100%;
+      padding: 16px 10px;
+    }
+  }
+}
