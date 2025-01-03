@@ -400,12 +400,6 @@ body {
   align-items: center;
   width: 100%;
 }
-@media only screen and (max-width: 576px) {
-  .flash-sale__container {
-    flex-direction: row;
-    text-align: center;
-  }
-}
 .flash-sale__content {
   flex: 1;
 }
@@ -437,7 +431,8 @@ body {
   justify-content: center;
   background-color: #fff;
   color: #000;
-  width: 70px;
+  max-width: 70px;
+  width: 100%;
   height: 100px;
   border: 1px solid #000;
   text-align: center;
@@ -625,6 +620,16 @@ body {
   justify-content: center;
   gap: 10px;
 }
+@media only screen and (max-width: 768px) {
+  .image-gallery__row {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .image-gallery__row--top, .image-gallery__row--bottom {
+    margin: 20px 0;
+  }
+}
 .image-gallery__row--top {
   margin-bottom: 40px;
 }
@@ -633,7 +638,45 @@ body {
 }
 .image-gallery__img {
   height: auto;
-  object-fit: none;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+@media only screen and (max-width: 768px) {
+  .image-gallery__img {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .image-gallery__img--1, .image-gallery__img--2, .image-gallery__img--3, .image-gallery__img--4 {
+    position: static;
+    top: unset;
+    right: unset;
+  }
+}
+.image-gallery__img--1 {
+  position: relative;
+  top: 215px;
+  right: 90px;
+}
+.image-gallery__img--2 {
+  position: relative;
+  top: 25px;
+  right: 32px;
+}
+.image-gallery__img--3 {
+  position: relative;
+  top: -150px;
+  right: -170px;
+}
+.image-gallery__img--4 {
+  position: relative;
+  top: -300px;
+  right: -210px;
 }
 .image-gallery__center {
   position: relative;
@@ -642,9 +685,25 @@ body {
   justify-content: center;
   margin: 0 auto;
 }
+@media only screen and (max-width: 768px) {
+  .image-gallery__center {
+    margin-top: 20px;
+  }
+}
 .image-gallery__logo {
   width: 90px;
   height: auto;
+  position: relative;
+  top: -92px;
+  right: -20px;
+}
+@media only screen and (max-width: 768px) {
+  .image-gallery__logo {
+    position: static;
+    top: unset;
+    right: unset;
+    margin-top: 15px;
+  }
 }
 
 .new-arrivals {

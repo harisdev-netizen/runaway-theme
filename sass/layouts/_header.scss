@@ -23,7 +23,7 @@
 
       @include respond-to('small') {
         flex-direction: column;
-        align-items: center; // Center the header content
+        align-items: center;
       }
     }
 
@@ -56,15 +56,13 @@
       gap: 8px;
     }
 
-    // For the toggle button and menu
     @include respond-to('small') {
       flex-direction: column;
-      align-items: center; // Center the menu items
+      align-items: center;
       gap: 8px;
-      display: none; // Hide the menu by default
+      display: none;
     }
 
-    // The checkbox and label for toggle
     input[type="checkbox"] {
       display: none;
     }
@@ -84,11 +82,11 @@
     }
 
     input[type="checkbox"]:checked + label img {
-      transform: rotate(180deg); // Rotate the icon when checked
+      transform: rotate(180deg);
     }
 
     input[type="checkbox"]:checked ~ .header__top-container {
-      display: block; // Show the menu when checkbox is checked
+      display: block;
     }
   }
 
@@ -135,7 +133,7 @@
 
     @include respond-to('small') {
       gap: 10px;
-      justify-content: center; // Center the icons on small screens
+      justify-content: center;
     }
   }
 
@@ -162,7 +160,7 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 15px;
-      display: none; // Hide the menu by default
+      display: none;
     }
   }
 
