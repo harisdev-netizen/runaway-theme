@@ -17,12 +17,21 @@
           </p>
 
           <div class="header__top-menu">
-            <a class="header__language">English
-              <img src="./assets/svg/down arrow.svg" alt="Down Arrow Icon"/>
-            </a>
-            <a class="header__currency">USD
-              <img src="./assets/svg/down arrow.svg" alt="Down Arrow Icon"/>
-            </a>
+            <label for="language-select">
+              <select id="language-select" class="header__select">
+                <option value="en" selected>English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+              </select>
+            </label>
+            
+            <label for="currency-select">
+              <select id="currency-select" class="header__select">
+                <option value="usd" selected>USD</option>
+                <option value="eur">EUR</option>
+                <option value="gbp">GBP</option>
+              </select>
+            </label>
           </div>
         </div>
       </div>
@@ -38,9 +47,11 @@
                 <a href="#" class="header__menu-link">Home</a>
               </li>
               <li class="header__menu-item">
-                <a href="#" class="header__menu-link"
-                  >Shop
-                  <img src="./assets/svg/down arrow.svg" alt="Down Arrow Icon" class="header__menu-link--black" /></a>
+                <a href="#" class="header__menu-link">Shop
+                  <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 1L5.5 5L9.5 1" stroke="black" stroke-width="1.5"/>
+                  </svg>
+                </a>
               </li>
               <li class="header__menu-item">
                 <a href="#" class="header__menu-link">Reviews</a>
@@ -55,15 +66,18 @@
           </nav>
           <div class="header__actions">
             <div class="header__icons">
-              <span class="header__icon"
-                ><img src="./assets/svg/heart-icon.svg" alt=""
-              /></span>
-              <span class="header__icon"
-                ><img src="./assets/svg/user-alt.svg" alt=""
-              /></span>
-              <span class="header__icon"
-                ><img src="./assets/svg/shopping-bag.svg" alt=""
-              /></span>
+              <span class="header__icon">
+                <img src="./assets/svg/search.svg" alt=""/>
+              </span>
+              <span class="header__icon">
+                <img src="./assets/svg/heart-icon.svg" alt=""/>
+              </span>
+              <span class="header__icon">
+                <img src="./assets/svg/user-alt.svg" alt=""/>
+              </span>
+              <span class="header__icon">
+                <img src="./assets/svg/shopping-bag.svg" alt=""/>
+              </span>
             </div>
           </div>
         </div>
